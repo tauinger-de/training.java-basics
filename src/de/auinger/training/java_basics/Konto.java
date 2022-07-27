@@ -23,12 +23,12 @@ public class Konto {
     // --- Felder ---
     //
 
-    // todo dieses feld kann "final" sein
+    // todo dieses feld soll "final" sein
     private String kontoNummer;
 
     private double kontoStand;
 
-    // todo dieses feld kann "final" sein
+    // todo dieses feld soll "final" sein
     private String besitzer;
 
     //
