@@ -1,11 +1,11 @@
-package de.auinger.training.java_basics;
+package de.auinger.training.java_basics.exercise7;
 
 public class KontoTest {
 
     public static void main(String[] args) {
 
         GiroKonto meinKonto = new GiroKonto(
-                "123-436",
+                "123-456",
                 1000.0,
                 "Enrico Pallazzo",
                 -200.0);
@@ -18,7 +18,7 @@ public class KontoTest {
                 "Herr Pleite Geier"
         );
 
-        meinKonto.transfer(anderesKonto, 1_201.0);
+        meinKonto.transfer(anderesKonto, 1_099.0);
 
         System.out.println(meinKonto.kontoStatus());
         System.out.println(anderesKonto.kontoStatus());

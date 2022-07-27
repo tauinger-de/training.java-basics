@@ -1,4 +1,4 @@
-package de.auinger.training.java_basics;
+package de.auinger.training.java_basics.exercise7;
 
 // Konto ist die SUPER-Klasse von GiroKonto
 // GiroKonto ist die SUB-Klasse von Konto
@@ -7,7 +7,7 @@ public class GiroKonto extends Konto {
     /**
      * Ein negativer Wert, der somit den niedrigst-erlaubten Kontostand widerspiegelt.
      */
-    private double dispoRahmen;
+    private final double dispoRahmen;
 
     public GiroKonto(String kontoNummer, double kontoStand, String besitzer,
                      double dispoRahmen)
@@ -17,20 +17,21 @@ public class GiroKonto extends Konto {
         this.dispoRahmen = dispoRahmen;
     }
 
-    // TODO dieser code-block ähnelt sehr dem aus der superklasse, es wäre schöner
-    // wenn es eine eigene Methode zum Prüfen der Bonität gäbe
     @Override
-    public boolean debit(double amount) {
-        double neuerKontoStand = getKontoStand() - amount;
-        if (neuerKontoStand < dispoRahmen) {
-            System.out.println("Nicht genügend Dispo für Abbuchung");
+    protected boolean checkBalance(double amount) {
+        double neuerKontostand = getKontoStand() - amount;
+        if (neuerKontostand < dispoRahmen) {
+            System.out.println("Nicht genügend Dispo für Überweisung");
             return false;
         }
         else {
-            setKontoStand(neuerKontoStand);
             return true;
         }
     }
 
-    // TODO mir fehlt noch eine aktualisierte Version von der Methode "kontoStatus" (@Override Überschreibung)
+    @Override
+    public String kontoStatus() {
+        return super.kontoStatus() + " Das Konto kann aufgrund des Dispo-Rahmens bis zu einem Kontostand von "
+                + this.dispoRahmen + " EUR belastet werden.";
+    }
 }

@@ -1,4 +1,4 @@
-package de.auinger.training.java_basics;
+package de.auinger.training.java_basics.exercise7;
 
 public class Konto {
 
@@ -23,19 +23,21 @@ public class Konto {
     // --- Felder ---
     //
 
-    // TODO dieses feld soll "final" sein
-    private String kontoNummer;
+    private final String kontoNummer;
 
     private double kontoStand;
 
     // TODO dieses feld soll "final" sein
-    private String besitzer;
+    private final String besitzer;
 
     //
     // --- Konstruktion ---
     //
 
-    // TODO wir brauchen noch einen weiteren Konstruktor, der nur kontoNummer und besitzer benötigt. Der Kontostand soll dann 0.0 sein.
+
+    public Konto(String kontoNummer, String besitzer) {
+        this(kontoNummer, 0.0, besitzer);
+    }
 
     // ein Konstruktor ist auch nur eine Methode mit einem Namen. Der
     // analog der Klasse lautet und *NICHT* direkt aufgerufen werden kann.
@@ -61,12 +63,25 @@ public class Konto {
     }
 
     public boolean debit(double amount) {
+        boolean balanceOkay = checkBalance(amount);
+        if (balanceOkay) {
+            this.kontoStand -= amount;
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    /**
+     * Gibt `true` zurück, wenn genügend Deckung da ist (positiver Test erfolgreich)
+     */
+    protected boolean checkBalance(double amount) {
         if (kontoStand < amount) {
             System.out.println("Nicht genügend Deckung für Abbuchung");
             return false;
         }
         else {
-            this.kontoStand -= amount;
             return true;
         }
     }
@@ -80,21 +95,8 @@ public class Konto {
     // --- Setter / Getter ---
     //
 
-    public void setKontoNummer(String kontoNummer) {
-        this.kontoNummer = kontoNummer;
-    }
-
     public double getKontoStand() {
         return kontoStand;
-    }
-
-    // TODO wir wollen keine setter für den Kontostand!
-    public void setKontoStand(double kontoStand) {
-        this.kontoStand = kontoStand;
-    }
-
-    public void setBesitzer(String besitzer) {
-        this.besitzer = besitzer;
     }
 
 }
