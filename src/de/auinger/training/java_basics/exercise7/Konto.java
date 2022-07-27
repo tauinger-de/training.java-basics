@@ -67,8 +67,7 @@ public class Konto {
         if (balanceOkay) {
             this.kontoStand -= amount;
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }
@@ -80,8 +79,7 @@ public class Konto {
         if (kontoStand < amount) {
             System.out.println("Nicht genügend Deckung für Abbuchung");
             return false;
-        }
-        else {
+        } else {
             return true;
         }
     }

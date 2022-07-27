@@ -10,8 +10,7 @@ public class GiroKonto extends Konto {
     private final double dispoRahmen;
 
     public GiroKonto(String kontoNummer, double kontoStand, String besitzer,
-                     double dispoRahmen)
-    {
+                     double dispoRahmen) {
         // Konstruktor-Chaining -- wir rufen den Super-Konstruktor auf
         super(kontoNummer, kontoStand, besitzer);
         this.dispoRahmen = dispoRahmen;

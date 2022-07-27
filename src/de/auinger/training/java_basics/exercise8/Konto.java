@@ -33,7 +33,6 @@ public class Konto {
     // --- Konstruktion ---
     //
 
-
     public Konto(String kontoNummer, String besitzer) {
         this(kontoNummer, 0.0, besitzer);
     }
