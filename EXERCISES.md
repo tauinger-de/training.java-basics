@@ -25,16 +25,19 @@
 ## 9) Klassenattribute
 
 1. Erstellen Sie eine Klasse `NameValidator`, die prüft, ob ein Kundenname richtig formatiert ist.
-Eine richtige Formatierung liegt dann vor, wenn der Name mindestens 5 Zeichen enthält (Sie können
-gerne noch weitere Regeln sich ausdenken)
-2. Die Prüfmethode soll zusätzlich bei jedem zweiten Aufruf eine `ServiceNotAvailableException` 
-(Superklasse `Exception`) werfen, da der Dienst sehr unzuverlässig ist.
+   Eine richtige Formatierung liegt dann vor, wenn der Name mindestens 5 Zeichen enthält (Sie können
+   gerne noch weitere Regeln sich ausdenken)
+2. Die Prüfmethode soll zusätzlich bei jedem zweiten Aufruf eine `ServiceNotAvailableException`
+   (Superklasse `Exception`) werfen, da der Dienst sehr unzuverlässig ist.
+   Diese Klasse müssen Sie selbst erstellen.
 3. Erstellen Sie eine neue Klasse `ToolsFactory`
 4. Legen Sie eine statische Methode namens `getNameValidator` an, die eine Instanz des `NameValidator`
-zurückgibt.
-5. Nutzen Sie den `NameValidator` (geholt aus der `ToolsFactory`) beim Anlegen eines neuen Kontos. Wenn der Dienst nicht zur Verfügung
-steht, dann soll der Name des Kunden in Klammern im Konto hinterlegt werden, also z.B. "(Max Mustermann)",
-damit später noch eine Prüfung nachgeholt werden kann.
+   zurückgibt.
+5. Nutzen Sie den `NameValidator` (geholt aus der `ToolsFactory`) beim Anlegen eines neuen Kontos. Wenn der Dienst nicht
+   zur Verfügung
+   steht, dann soll der Name des Kunden mit doppelten Pfeilklammern im Konto hinterlegt werden, also
+   z.B. "<<Max Mustermann>>",
+   damit später noch eine Prüfung nachgeholt werden kann.
 
 # ARRAYS
 
