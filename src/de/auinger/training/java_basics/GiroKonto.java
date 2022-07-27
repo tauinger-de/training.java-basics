@@ -17,7 +17,7 @@ public class GiroKonto extends Konto {
         this.dispoRahmen = dispoRahmen;
     }
 
-    // todo dieser code-block ähnelt sehr dem aus der superklasse, es wäre schöner
+    // TODO dieser code-block ähnelt sehr dem aus der superklasse, es wäre schöner
     // wenn es eine eigene Methode zum Prüfen der Bonität gäbe
     @Override
     public boolean debit(double amount) {
@@ -32,5 +32,5 @@ public class GiroKonto extends Konto {
         }
     }
 
-    // todo mir fehlt noch eine aktualisierte Version von der Methode "kontoStatus" (@Override Überschreibung)
+    // TODO mir fehlt noch eine aktualisierte Version von der Methode "kontoStatus" (@Override Überschreibung)
 }
