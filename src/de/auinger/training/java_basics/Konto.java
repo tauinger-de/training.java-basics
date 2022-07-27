@@ -23,15 +23,19 @@ public class Konto {
     // --- Felder ---
     //
 
+    // todo dieses feld kann "final" sein
     private String kontoNummer;
 
     private double kontoStand;
 
+    // todo dieses feld kann "final" sein
     private String besitzer;
 
     //
     // --- Konstruktion ---
     //
+
+    // todo wir brauchen noch einen weiteren Konstruktor, der nur kontoNummer und besitzer benötigt. Der Kontostand soll dann 0.0 sein.
 
     // ein Konstruktor ist auch nur eine Methode mit einem Namen. Der
     // analog der Klasse lautet und *NICHT* direkt aufgerufen werden kann.
