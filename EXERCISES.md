@@ -78,7 +78,10 @@ Bsp:
 Berechnen Sie die Anzahl der Vorkommen von mindestens zwei gleichen
 Elementen hintereinander ("Klumpen").
 
-Bsp: `countClumps( [1, 2, 2, 3, 4, 4] ) == 2`
+Bsp:
+- `countClumps( [1, 2, 2, 3, 4, 4] ) == 2`
+- `countClumps( [1, 2, 3] ) == 0`
+- `countClumps( [66, 66, 77] ) == 1`
 
 ## Balancierbar
 
