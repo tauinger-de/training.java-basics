@@ -41,12 +41,12 @@
 
 ## 10) Arrays
 
-4. Erweitern Sie den `NameValidator` um ein Array von Strings. Diese sollen in einem gültigen
+1. Erweitern Sie den `NameValidator` um ein Array von Strings. Diese sollen in einem gültigen
    Namen nicht vorkommen, sind also eine Art "bad words".
-5. Ändern Sie die Validierungsmethode so ab, dass die Validierung fehlschlägt, wenn mindestens
+2. Ändern Sie die Validierungsmethode so ab, dass die Validierung fehlschlägt, wenn mindestens
    ein "bad word" im Namen gefunden wurde (z.B. "Muster" oder "Beispiel"). Tipp: Eine String-Instanz
    hat Methoden, um auf enthaltene Zeichenketten zu prüfen.
-6. Machen Sie eine oder mehrere der Übungen aus dem Abschnitt "ZUSATZÜBUNGEN ARRAYS" weiter unten
+3. Machen Sie eine oder mehrere der Übungen aus dem Abschnitt "ZUSATZÜBUNGEN ARRAYS" weiter unten
 
 ## 11) ArrayList & Komposition
 
@@ -56,16 +56,22 @@
 2. Eine Methode `Konto.getTransaktionen()` soll alle Vorgänge ausgeben.
 3. Ist diese Liste an Transaktionen sicher bzgl. weiterer Manipulationen von außerhalb?
 
-## 12) Vererbung
+## 12) Aggregation
+
+1. Erstellen Sie eine Klasse `Kunde`. Dieser hat einen Namen. 
+2. Ersetzen Sie das Attribut `String besitzer` im Konto durch eine Referenz auf den Kunden,
+denn ein Konto soll seinen Kunden kennen.
 
 # ZUSATZÜBUNGEN ARRAYS
 
 ## Durchschnitt ohne Extremwerte
 
-Berechnen Sie den Durchschnitt aller Werte in einem Array ohne den
+Berechnen Sie den Durchschnitt aller Werte in einem unsortierten Array ohne den
 größten und kleinsten Wert zu beachten.
 
-Bsp: `centeredAvg( [1, 2, 3, 7, 100] ) == 4`
+Bsp:
+- `centeredAvg( [1, 2, 3, 7, 100] ) == 4`
+- `centeredAvg( [99, 98, 2, 2] ) == 50`
 
 ## Anzahl Klumpen
 
