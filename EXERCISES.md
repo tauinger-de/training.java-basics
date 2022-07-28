@@ -19,8 +19,8 @@
    die in der Bonitätsprüfung geworfen wird, wenn
    keine Deckung vorliegt. Diese soll eine Message enthalten und in der `Girokonto` Subklasse einen
    anderen Text haben als in der Superklasse
-2. Fangen Sie die Exception in der main-Klasse und behandeln Sie diese durch eine einfache System.out
-   Ausgabe.
+2. Fangen Sie die Exception in der main-Klasse und behandeln Sie diese durch eine
+   einfache "System.out"-Ausgabe.
 
 ## 9) Klassenattribute
 
@@ -39,17 +39,49 @@
    z.B. "<<Max Mustermann>>",
    damit später noch eine Prüfung nachgeholt werden kann.
 
-# ARRAYS
+## 10) Arrays
 
-## Durchschnitt ohne Ausreißer
+4. Erweitern Sie den `NameValidator` um ein Array von Strings. Diese sollen in einem gültigen
+   Namen nicht vorkommen, sind also eine Art "bad words".
+5. Ändern Sie die Validierungsmethode so ab, dass die Validierung fehlschlägt, wenn mindestens
+   ein "bad word" im Namen gefunden wurde (z.B. "Muster" oder "Beispiel"). Tipp: Eine String-Instanz
+   hat Methoden, um auf enthaltene Zeichenketten zu prüfen.
+6. Machen Sie eine oder mehrere der Übungen aus dem Abschnitt "ZUSATZÜBUNGEN ARRAYS" weiter unten
 
-Berechnen Sie den Durchschnitt aller Werte in einem Array ohne den größten und kleinsten Wert zu beachten.
+## 11) Beziehungen
+
+1. Es sollen alle Transaktionen in einem Konto memoriert werden.
+   Benutzen Sie dafür eine `ArrayList` namens `transaktionen`, in der die erfolgreich
+   durchgeführten Transaktionen gespeichert werden.
+2. Eine Methode `Konto.getTransaktionen()` soll alle Vorgänge ausgeben.
+3. Ist diese Liste an Transaktionen sicher bzgl. weiterer Manipulationen von außerhalb?
+
+## 12) Vererbung
+
+# ZUSATZÜBUNGEN ARRAYS
+
+## Durchschnitt ohne Extremwerte
+
+Berechnen Sie den Durchschnitt aller Werte in einem Array ohne den
+größten und kleinsten Wert zu beachten.
 
 Bsp: `centeredAvg( [1, 2, 3, 4, 100] ) == 3`
 
-## Anzahl
+## Anzahl Klumpen
 
 Berechnen Sie die Anzahl der Vorkommen von mindestens zwei gleichen
 Elementen hintereinander ("Klumpen").
 
 Bsp: `countClumps( [1, 2, 2, 3, 4, 4] ) == 2`
+
+## Balancierbar
+
+Gibt es eine Stelle in einem Array, der beide Teile in Balance hält?
+Berechnen Sie, ob es in einem Array eine Position/Index gibt, der das Array so in zwei Teile
+teilt, dass die Summe der Werte beider Teile gleich ist.
+
+Bsp:
+
+- `canBalance( [1, 1, 1, 2, 1] ) == true`
+- `canBalance( [2, 1, 2] ) == false`
+- `canBalance( [5, 5] ) == true`
