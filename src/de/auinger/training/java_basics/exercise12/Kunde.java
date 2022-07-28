@@ -1,5 +1,6 @@
 package de.auinger.training.java_basics.exercise12;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Kunde {
@@ -42,7 +43,7 @@ public class Kunde {
 
     public List<Konto> getKonten() {
         // wir wollen keine "null" Werte zurückgeben, daher packen wir erstmal alle Konten in die Liste und entfernen dann "null"
-        List<Konto> result = List.of(this.giroKonto, this.sparKonto);
+        List<Konto> result = new ArrayList<>(List.of(this.giroKonto, this.sparKonto));
         result.remove(null);
         return result;
     }
