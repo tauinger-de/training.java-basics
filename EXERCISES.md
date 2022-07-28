@@ -59,30 +59,27 @@ das Oberelement existieren kann.
 2. Eine Methode `Konto.getTransaktionen()` soll alle Vorgänge ausgeben.
 3. Ist diese Liste an Transaktionen sicher bzgl. weiterer Manipulationen von außerhalb?
 4. Überschreiben Sie in der Transaktion Klasse die Methode `toString()` und geben dann die
-Transaktionsliste aus.
+   Transaktionsliste aus.
 
 ## 12) Aggregation
 
 1. Erstellen Sie eine Klasse `Kunde`. Dieser hat einen Namen.
 2. Ein Kunde *kann* ein `Girokonto` und ein `Sparkonto` haben (Aggregation-Referenz).
 3. Ziehen Sie die `NameValidator` Logik vom `Konto` in `Kunde` um, und entfernen Sie dann
-das Attribut `besitzer` im Konto.
+   das Attribut `besitzer` im Konto.
 4. Schreiben Sie eine Methode `zeigeTransaktionenAllerKonten`, die für alle Konten des Kunden
-die Liste an Transaktionen ausgibt.
+   die Liste an Transaktionen ausgibt.
 
-## 13) Abstract
+## 13) Abstract & Interfaces
 
-1. Machen Sie die Klasse `Konto` abstrakt. 
+1. Machen Sie die Klasse `Konto` abstrakt.
 2. Ebenfalls soll die Methode `checkBalance` auch abstrakt sein und nur in Subklassen implementiert werden.
-
-## 14) Interfaces
-
-1. Erstellen Sie ein Interface `Verzinsbar` mit diesen Methoden
-   - `void zahleZinsen()`
-   - `float getZinsSatz()`
-2. Lassen Sie Klasse `Konto` dieses Interface implementieren ("implements"). Wo können nun die
-Methodenrümpfe befüllt/implementiert werden? Implementieren Sie diese Methoden. Die 
-Auszahlung der Zinsen soll als eine neue Transaktion gespeichert werden.
+3. Erstellen Sie ein Interface `Verzinsbar` mit diesen Methoden
+    - `void zahleZinsen()`
+    - `float getZinsSatz()`
+4Lassen Sie Klasse `Konto` dieses Interface implementieren ("implements"). Wo können nun die
+   Methodenrümpfe befüllt/implementiert werden? Implementieren Sie diese Methoden. Die
+   Auszahlung der Zinsen soll als eine neue Transaktion gespeichert werden.
 
 # ZUSATZÜBUNGEN ARRAYS
 
@@ -92,6 +89,7 @@ Berechnen Sie den Durchschnitt aller Werte in einem unsortierten Array ohne den
 größten und kleinsten Wert zu beachten.
 
 Bsp:
+
 - `centeredAvg( [1, 2, 3, 7, 100] ) == 4`
 - `centeredAvg( [99, 98, 12, 2] ) == 60`
 
@@ -101,6 +99,7 @@ Berechnen Sie die Anzahl der Vorkommen von mindestens zwei gleichen
 Elementen hintereinander ("Klumpen").
 
 Bsp:
+
 - `countClumps( [1, 2, 2, 3, 4, 4] ) == 2`
 - `countClumps( [1, 2, 3] ) == 0`
 - `countClumps( [66, 66, 66, 77] ) == 1`
