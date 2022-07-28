@@ -48,7 +48,7 @@
    hat Methoden, um auf enthaltene Zeichenketten zu prüfen.
 6. Machen Sie eine oder mehrere der Übungen aus dem Abschnitt "ZUSATZÜBUNGEN ARRAYS" weiter unten
 
-## 11) Beziehungen
+## 11) ArrayList & Komposition
 
 1. Es sollen alle Transaktionen in einem Konto memoriert werden.
    Benutzen Sie dafür eine `ArrayList` namens `transaktionen`, in der die erfolgreich
@@ -65,7 +65,7 @@
 Berechnen Sie den Durchschnitt aller Werte in einem Array ohne den
 größten und kleinsten Wert zu beachten.
 
-Bsp: `centeredAvg( [1, 2, 3, 4, 100] ) == 3`
+Bsp: `centeredAvg( [1, 2, 3, 7, 100] ) == 4`
 
 ## Anzahl Klumpen
 
