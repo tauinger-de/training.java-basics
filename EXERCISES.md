@@ -58,6 +58,8 @@ das Oberelement existieren kann.
    durchgeführten Transaktionen gespeichert werden (Komposition-Referenz).
 2. Eine Methode `Konto.getTransaktionen()` soll alle Vorgänge ausgeben.
 3. Ist diese Liste an Transaktionen sicher bzgl. weiterer Manipulationen von außerhalb?
+4. Überschreiben Sie in der Transaktion Klasse die Methode `toString()` und geben dann die
+Transaktionsliste aus.
 
 ## 12) Aggregation
 

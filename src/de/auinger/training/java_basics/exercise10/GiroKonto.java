@@ -29,4 +29,14 @@ public class GiroKonto extends Konto {
         return super.kontoStatus() + " Das Konto kann aufgrund des Dispo-Rahmens bis zu einem Kontostand von "
                 + this.dispoRahmen + " EUR belastet werden.";
     }
+
+
+    @Override
+    public String toString() {
+        return "GiroKonto [kontoNr: " + this.getKontoNummer() + "]";
+    }
+
+    public double getDispoRahmen() {
+        return dispoRahmen;
+    }
 }

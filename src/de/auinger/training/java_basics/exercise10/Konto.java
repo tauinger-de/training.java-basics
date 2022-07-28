@@ -1,6 +1,6 @@
 package de.auinger.training.java_basics.exercise10;
 
-public class Konto {
+public class Konto extends Object {
 
     // public
     // "" (default, package-private)
@@ -93,4 +93,7 @@ public class Konto {
         return kontoStand;
     }
 
+    public String getKontoNummer() {
+        return kontoNummer;
+    }
 }
