@@ -14,8 +14,7 @@ class SparKonto {
 }
 
 class Transaktion {
--senderKontoNummer:String
--empfaengerKontoNummer:String
+-gegenKontoNummer:String
 -betrag:double
 -verwendungszweck:String
 }
