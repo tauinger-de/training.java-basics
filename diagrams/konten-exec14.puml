@@ -1,0 +1,47 @@
+@startuml
+
+abstract class Konto {
+-kontoNummer:String
++getKontoNummer():String
+}
+
+interface Verzinsbar {
++zahleZinsen()
++getZinsSatz():float
+}
+
+class GiroKonto {
+-dispoRahmen:double
+}
+
+class SparKonto {
+-papierlos:boolean
+}
+
+class Transaktion {
+-gegenKontoNummer:String
+-betrag:double
+-verwendungszweck:String
+}
+
+class Kunde {
+-name:String
+-giroKonto:GiroKonto
+-sparKonto:SparKonto
++getKonten():List<Konto>
+}
+
+class NameValidator {
+-badWords:List<String>
++validateName(name:String):bool
+}
+
+Konto "1" -right-* "*" Transaktion
+GiroKonto -up-|> Konto
+SparKonto -up-|> Konto
+Kunde "1" -up-o "1" GiroKonto
+Kunde "1" -up-o "1" SparKonto
+Kunde -right- NameValidator
+Konto .up.|> Verzinsbar
+
+@enduml

@@ -50,17 +50,37 @@
 
 ## 11) ArrayList & Komposition
 
+Hier erstellen wir eine Komposition, also ein "hat ein" wo das Unterelement nicht ohne
+das Oberelement existieren kann.
+
 1. Es sollen alle Transaktionen in einem Konto memoriert werden.
    Benutzen Sie dafür eine `ArrayList` namens `transaktionen`, in der die erfolgreich
-   durchgeführten Transaktionen gespeichert werden.
+   durchgeführten Transaktionen gespeichert werden (Komposition-Referenz).
 2. Eine Methode `Konto.getTransaktionen()` soll alle Vorgänge ausgeben.
 3. Ist diese Liste an Transaktionen sicher bzgl. weiterer Manipulationen von außerhalb?
 
 ## 12) Aggregation
 
-1. Erstellen Sie eine Klasse `Kunde`. Dieser hat einen Namen. 
-2. Ersetzen Sie das Attribut `String besitzer` im Konto durch eine Referenz auf den Kunden,
-denn ein Konto soll seinen Kunden kennen.
+1. Erstellen Sie eine Klasse `Kunde`. Dieser hat einen Namen.
+2. Ein Kunde *kann* ein `Girokonto` und ein `Sparkonto` haben (Aggregation-Referenz).
+3. Ziehen Sie die `NameValidator` Logik vom `Konto` in `Kunde` um, und entfernen Sie dann
+das Attribut `besitzer` im Konto.
+4. Schreiben Sie eine Methode `zeigeTransaktionenAllerKonten`, die für alle Konten des Kunden
+die Liste an Transaktionen ausgibt.
+
+## 13) Abstract
+
+1. Machen Sie die Klasse `Konto` abstrakt. 
+2. Ebenfalls soll die Methode `checkBalance` auch abstrakt sein und nur in Subklassen implementiert werden.
+
+## 14) Interfaces
+
+1. Erstellen Sie ein Interface `Verzinsbar` mit diesen Methoden
+   - `void zahleZinsen()`
+   - `float getZinsSatz()`
+2. Lassen Sie Klasse `Konto` dieses Interface implementieren ("implements"). Wo können nun die
+Methodenrümpfe befüllt/implementiert werden? Implementieren Sie diese Methoden. Die 
+Auszahlung der Zinsen soll als eine neue Transaktion gespeichert werden.
 
 # ZUSATZÜBUNGEN ARRAYS
 
@@ -71,7 +91,7 @@ größten und kleinsten Wert zu beachten.
 
 Bsp:
 - `centeredAvg( [1, 2, 3, 7, 100] ) == 4`
-- `centeredAvg( [99, 98, 2, 2] ) == 50`
+- `centeredAvg( [99, 98, 12, 2] ) == 60`
 
 ## Anzahl Klumpen
 
@@ -81,7 +101,7 @@ Elementen hintereinander ("Klumpen").
 Bsp:
 - `countClumps( [1, 2, 2, 3, 4, 4] ) == 2`
 - `countClumps( [1, 2, 3] ) == 0`
-- `countClumps( [66, 66, 77] ) == 1`
+- `countClumps( [66, 66, 66, 77] ) == 1`
 
 ## Balancierbar
 
