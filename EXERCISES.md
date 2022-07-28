@@ -77,7 +77,7 @@ das Oberelement existieren kann.
 3. Erstellen Sie ein Interface `Verzinsbar` mit diesen Methoden
     - `void zahleZinsen()`
     - `float getZinsSatz()`
-4Lassen Sie Klasse `Konto` dieses Interface implementieren ("implements"). Wo können nun die
+4. Lassen Sie Klasse `Konto` dieses Interface implementieren ("implements"). Wo können nun die
    Methodenrümpfe befüllt/implementiert werden? Implementieren Sie diese Methoden. Die
    Auszahlung der Zinsen soll als eine neue Transaktion gespeichert werden.
 
