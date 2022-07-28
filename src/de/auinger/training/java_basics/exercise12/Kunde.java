@@ -1,12 +1,14 @@
 package de.auinger.training.java_basics.exercise12;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Kunde {
 
     private final String name;
 
-    private final ArrayList<Konto> konten;
+    private GiroKonto giroKonto;
+
+    private SparKonto sparKonto;
 
     public Kunde(String name) {
         try {
@@ -16,24 +18,38 @@ public class Kunde {
             name = "<<" + name + ">>";
         }
         this.name = name;
-        this.konten = new ArrayList<>();
     }
 
     public String getName() {
         return name;
     }
 
+    public GiroKonto getGiroKonto() {
+        return giroKonto;
+    }
+
     public void setGiroKonto(GiroKonto giroKonto) {
-        this.konten.add(giroKonto);
+        this.giroKonto = giroKonto;
+    }
+
+    public SparKonto getSparKonto() {
+        return sparKonto;
     }
 
     public void setSparKonto(SparKonto sparKonto) {
-        this.konten.add(sparKonto);
+        this.sparKonto = sparKonto;
+    }
+
+    public List<Konto> getKonten() {
+        // wir wollen keine "null" Werte zurückgeben, daher packen wir erstmal alle Konten in die Liste und entfernen dann "null"
+        List<Konto> result = List.of(this.giroKonto, this.sparKonto);
+        result.remove(null);
+        return result;
     }
 
     public void zeigeTransaktionenAllerKonten() {
         System.out.println("Kontoübersicht für Kunde " + name + ":");
-        for (Konto konto : this.konten) {
+        for (Konto konto : this.getKonten()) {
             System.out.println("- " + konto.kontoStatus());
             for (Transaction trx : konto.getTransactionList()) {
                 System.out.println("  - " + trx.toString());
