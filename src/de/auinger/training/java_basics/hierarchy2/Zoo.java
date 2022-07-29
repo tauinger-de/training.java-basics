@@ -12,35 +12,35 @@ public class Zoo {
     public Zoo() {
         Crocodile crocodileJohnny = new Crocodile();
         FlyingSnake flyingSnakeJim = new FlyingSnake();
-        Bat batRobin = new Bat();
 
         ourReptiles = new ArrayList<>();
         ourReptiles.add(crocodileJohnny);
         ourReptiles.add(flyingSnakeJim);
 
         ourCarnivores = new ArrayList<>();
-        ourCarnivores.add(crocodileJohnny);
-        ourCarnivores.add(batRobin);
+        ourCarnivores.add(Carnivore.createCarnivore(true, false));
+        ourCarnivores.add(Carnivore.createCarnivore(false, true));
+        ourCarnivores.add(Carnivore.createCarnivore(false, false));
 
         ourFlyingAnimals = new ArrayList<>();
-        ourFlyingAnimals.add(flyingSnakeJim);
-        ourFlyingAnimals.add(batRobin);
+        ourFlyingAnimals.add(Flying.createFlying(true));
+        ourFlyingAnimals.add(Flying.createFlying(false));
     }
 
     public void introduceAnimals() {
         System.out.println("\nOUR REPTILES:");
         for (Reptile reptile : this.ourReptiles) {
-            System.out.println(reptile.toString());
+            System.out.println("- " + reptile.toString());
         }
 
         System.out.println("\nOUR CARNIVORES:");
         for (Carnivore carnivore : this.ourCarnivores) {
-            System.out.println(carnivore.toString());
+            System.out.println("- " + carnivore.toString());
         }
 
         System.out.println("\nOUR FLYING ANIMALS:");
         for (Flying flying : this.ourFlyingAnimals) {
-            System.out.println(flying.toString());
+            System.out.println("- " + flying.toString());
         }
     }
 
