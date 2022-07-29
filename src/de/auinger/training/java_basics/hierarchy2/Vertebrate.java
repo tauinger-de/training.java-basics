@@ -6,6 +6,6 @@ public abstract class Vertebrate {
 
     @Override
     public String toString() {
-        return getClass().getSimpleName();
+        return getClass().getSimpleName() + " (avg. weight=" + getAverageWeightInKg() + "kg)";
     }
 }
