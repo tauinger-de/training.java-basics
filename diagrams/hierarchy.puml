@@ -1,0 +1,18 @@
+@startuml
+
+interface Carnivore
+interface Flying
+
+class Mammal
+
+class Bat extends Mammal implements Flying
+class Whale extends Mammal
+class BlueWhale extends Whale
+class Orca extends Whale implements Carnivore
+
+class Reptile
+
+class Crocodile extends Reptile implements Carnivore
+class FlyingSnake extends Reptile implements Carnivore, Flying
+
+@enduml
