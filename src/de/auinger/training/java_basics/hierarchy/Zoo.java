@@ -30,17 +30,17 @@ public class Zoo {
     public void introduceAnimals() {
         System.out.println("\nOUR REPTILES:");
         for (Reptile reptile : this.ourReptiles) {
-            System.out.println(reptile.toString());
+            System.out.println("- " + reptile.toString());
         }
 
         System.out.println("\nOUR CARNIVORES:");
         for (Carnivore carnivore : this.ourCarnivores) {
-            System.out.println(carnivore.toString());
+            System.out.println("- " + carnivore.toString());
         }
 
         System.out.println("\nOUR FLYING ANIMALS:");
         for (Flying flying : this.ourFlyingAnimals) {
-            System.out.println(flying.toString());
+            System.out.println("- " + flying.toString());
         }
     }
 
