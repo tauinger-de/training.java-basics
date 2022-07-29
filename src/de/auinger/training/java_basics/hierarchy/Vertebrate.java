@@ -1,4 +1,7 @@
 package de.auinger.training.java_basics.hierarchy;
 
-public class Vertebrate {
+public abstract class Vertebrate {
+
+    public abstract int getAverageWeightInKg();
+
 }

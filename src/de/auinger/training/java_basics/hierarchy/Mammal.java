@@ -1,4 +1,4 @@
 package de.auinger.training.java_basics.hierarchy;
 
-public class Mammal {
+public abstract class Mammal {
 }
