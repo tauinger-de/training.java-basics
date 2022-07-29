@@ -15,4 +15,6 @@ class Reptile
 class Crocodile extends Reptile implements Carnivore
 class FlyingSnake extends Reptile implements Carnivore, Flying
 
+Orca --> BlueWhale : bestFriend
+
 @enduml

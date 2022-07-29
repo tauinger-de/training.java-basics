@@ -1,4 +1,4 @@
 package de.auinger.training.java_basics.hierarchy;
 
-public class Whale {
+public abstract class Whale extends Mammal {
 }

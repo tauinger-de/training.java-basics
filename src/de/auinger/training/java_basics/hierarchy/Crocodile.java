@@ -1,4 +1,20 @@
 package de.auinger.training.java_basics.hierarchy;
 
-public class Crocodile {
+import java.util.List;
+
+public class Crocodile extends Reptile implements Carnivore {
+    @Override
+    public int getNumberOfTeeth() {
+        return 80;
+    }
+
+    @Override
+    public float getAverageWeightInKg() {
+        return 800f;
+    }
+
+    @Override
+    public List<String> preferredMeatTypes() {
+        return null;
+    }
 }
